@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url(images/startup_background.png);
+    background-position: center;
+    background-size: 100vw 100vh;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    overflow: hidden;
+    
+}
+
+/*------------------------Start Up Page-----------------------------------*/
+
+.startup-message{
+    height: 5vh;
+    margin: 10vh 0 0 0;
+    opacity: 0;
+    animation: fadeInOut 3s infinite;
+    animation-delay: 2s;
+}
+
+/*-------------------*/
+
+.start-button{
+    position: relative;
+    width: 34.18vh;
+    height: 40vh;
+    margin: 15vh 0 0 0;
+    animation: fadeIn 4s;
+}
+
+.start-button:hover{
+    opacity: 0.8;
+}
+
+.emtpy-bar{
+    position: absolute;
+    width: 34.18vh;
+    height: 40vh;
+    margin: 15vh 0 0 0;
+}
+
+.emtpy-bar-charge{
+    position: absolute;
+    width: 34.18vh;
+    height: 40vh;
+    margin: 15vh 0 0 0;
+    top: -100%;
+    animation-name: slideUp;
+    animation-duration: 2s;
+}
+
+.charged-bar{
+    position: absolute;
+    width: 34.18vh;
+    height: 40vh;
+    margin: 15vh 0 0 0;
+    animation: fadeIn 4s;
+}
+
+/*--------------------------Home Page------------------------------*/
+.hidden {
+    float: left;
+    line-height:0;
+    height: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+/*-----------------------*/
+
+.col {
+    float: left;
+    width: 32%;
+    height: 90vh;
+    object-fit: cover;
+    position: relative;
+    margin: 5vh 0.5vw 5vh 0.5vw;
+    border-radius: 50px;    
+    background-image: url(images/full_background.png);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    animation-name: slideDown;
+    animation-duration: 2s;   
+}
+
+.cover{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    border-radius: 50px;    
+}
+
+.cover-hover{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    border-radius: 50px;    
+    transition: 2s;
+    filter: brightness(80%);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.text{
+    font-size: 2.8vw;   
+    z-index: 2; 
+    width: 32vw;
+    color: #f7f7f7;
+    position: absolute;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
+    filter: brightness(100%);
+}
+
+.small-text{
+    font-size: 1.8vw;   
+    z-index: 2; 
+    width: 32vw;
+    color: #f7f7f7;
+    position: absolute;
+    margin-top: 5vh;
+    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
+    filter: brightness(100%);
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+.arrow-left{
+    animation: arrowtoLeft 1.5s infinite;
+}
+
+.arrow-right{
+    animation: arrowtoRight 1.5s infinite;
+}
+
+
+
+/*----------------------Expand to Project Page---------------------------------*/
+
+
+
+.col-expand {
+    float: left;
+    width: 90%;
+    height: 90vh;
+    margin: 5vh -50vw 5vh 5vw;
+
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: rgb(70, 70, 70);
+    
+    border-radius: 50px;    
+    background-image: url(images/expand_background.png);
+    background-position: center;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+    animation: expand_95;
+    animation-duration: 2s;
+    transition: 0.6s;
+}
+
+.cover-expand{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;        
+    object-fit: cover;
+}
+
+.text-expand{
+    font-size: 1.8vh;  
+    width:100%; 
+    z-index: 2; 
+    color: #f7f7f7;
+    position: absolute;
+    margin: 5vh 0 30vh -5vw;
+    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
+    animation: textExpand_95;
+    animation-duration: 2s;
+}
+
+.col-left-away  {
+    float: left;
+    width: 32%;
+    height: 90vh;
+    margin: 5vh 10vw 5vh -100vw;
+    border-radius: 50px;    
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+    transition: 3s;
+}
+
+.col-first-right-away {
+    float: left;
+    width: 32%;
+    height: 90vh;
+    margin: 5vh -100vw 5vh 100vw;
+    border-radius: 50px;    
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+    animation: slideRight_33_100;
+    animation-duration: 1.5s;
+}
+
+.col-second-right-away {
+    float: left;
+    width: 32%;
+    height: 90vh;
+    margin: 5vh -100vw 5vh 100vw;
+    border-radius: 50px;    
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
+    animation: slideRight_66_100;
+    animation-duration: 1s;
+}
+
+/*-----------------------*/
+
+.return-button{
+    opacity: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    position: absolute;
+    margin: 5vh 5vw 0 50px; 
+    animation: fadeInLate 4s;
+}
+
+.return-button:hover{
+    opacity: 100%;
+    filter: brightness(80%);
+    transition: 0.5s;
+}
+
+/*-------------------Contract to Home Page-------------------------*/
+
+.col-shrink{
+    float: left;
+    width: 32%;
+    height: 90vh;
+    object-fit: cover;
+    margin: 5vh 0.5vw 5vh 0.5vw;
+    border-radius: 50px;    
+    background-image: url(images/full_background.png);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    animation-name: shrink_32;
+    animation-duration: 2s;
+    transition: 0.5s;
+}
+
+.col-left-back{
+    float: left;
+    width: 32%;
+    height: 90vh;
+    object-fit: cover;
+    margin: 5vh 0.5vw 5vh 0.5vw;
+    border-radius: 50px;    
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    animation-name: slideRight;
+    animation-duration: 2s;
+}
+
+.col-right-back{
+    float: left;
+    width: 32%;
+    height: 90vh;
+    object-fit: cover;
+    margin: 5vh 0.5vw 5vh 0.5vw;
+    border-radius: 50px;    
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    animation-name: slideLeft;
+    animation-duration: 2s;
+}
+
+.text-shrink{
+    font-size: 2.8vw;    
+    width: 32vw;    
+    z-index: 2;
+    color: #f7f7f7;
+    position: absolute;
+    margin: 30vh 0 30vh 0vw;
+    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
+    animation: textShrink_32;
+    animation-duration: 2s;
+}
+
+.text-left-back{
+    font-size: 2.8vw;    
+    width: 32vw;
+    z-index: 2;
+    color: #f7f7f7;
+    position: absolute;
+    margin: 30vh 0 30vh 0vw;
+    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
+    animation-name: expand_32;
+    animation-duration: 2s;
+}
+
+.text-right-back{
+    font-size: 2.8vw;    
+    width: 32vw;
+    z-index: 2;
+    color: #f7f7f7;
+    position: absolute;
+    margin: 30vh -100vw 30vh 0vw;
+    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
+    animation-name: expand_32;
+    animation-duration: 2s;
+}
+
+/*------------------------------Col Hover------------------------------*/
+
+.col:hover, .col-shrink:hover, .col-left-back:hover, .col-right-back:hover{
+    margin: 1vh 0.5vw 5vh 0.5vw;
+    transition: 0.6s;
+}
+
+.cover-hover{
+    filter: brightness(80%);
+    z-index: 1;
+}
+
+/*------------------------------Animation-------------------------------*/
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes fadeInOut {
+    0%{opacity: 0.1;}
+    50%{opacity: 1;}
+    100%{opacity: 0.1;}
+}
+
+@keyframes fadeInLate {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 50%;}
+}
+
+@keyframes arrowtoLeft {
+    0%{margin-right: 0vw; opacity: 1;}
+    66%{margin-right: 3vw; opacity: 1;}
+    100%{margin-right: 3vw; opacity: 0;}
+}
+
+@keyframes arrowtoRight {
+    0%{margin-left: 0vw; opacity: 1;}
+    66%{margin-left: 3vw; opacity: 1;}
+    100%{margin-left: 3vw; opacity: 0;}
+}
+
+@keyframes slideUp {
+    0% {top: -0%;}
+    100% {top: -100%;}
+}
+
+@keyframes slideDown {
+    0% {margin-top: -100vh; pointer-events: none;}
+    100% {margin-top: 5vh; pointer-events: none;}
+
+}
+
+@keyframes slideLeft {
+    from{margin-left: 64vw; margin-right: -100vw; pointer-events: none;}
+    to{margin-left: 0.5vw; pointer-events: none;}
+}
+
+@keyframes slideRight {
+    from{margin-left: -32vw; pointer-events: none;}
+    to{margin-left: 0.5vw; pointer-events: none;}
+}
+
+@keyframes slideRight_33_100 {
+    from{margin-left: 33.5vw}
+    to{margin-left: 100vw}
+}
+
+@keyframes slideRight_66_100 {
+    from{margin-left: 66.5vw}
+    to{margin-left: 100vw}
+}
+
+@keyframes shrink_32 {
+    from{width: 90%; pointer-events: none;}
+    to{width: 32%; pointer-events: none;}
+}
+
+@keyframes expand_32 {
+    from{width: 0vw; pointer-events: none;}
+    to{width: 32vw; pointer-events: none;}
+}
+
+@keyframes expand_95 {
+    from{width: 32%;}
+    to{width: 90%;}
+}
+
+@keyframes textExpand_95 {
+    0%{ 
+        font-size: 2.8vw;    
+        width: 32vw;
+        margin: 30vh 0 30vh 0vw;
+    }
+
+    100%{   
+        font-size: 1.8vh;      
+        width: 100%;
+        margin: 5vh 0 30vh -5vw;
+    }
+}
+
+@keyframes textShrink_32 {  
+    0%{     
+        font-size: 1.8vh;      
+        width: 100%;
+        margin: 5vh 0 30vh -5vw;
+        pointer-events: none;
+    }    
+
+    100%{  
+        font-size: 2.8vw;    
+        width: 32vw;
+        margin: 30vh 0 30vh 0vw;
+        pointer-events: none;
+    }    
+}

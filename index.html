@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset= "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoiChun's Clip Demos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "main" draggable = false >
+<!--.................Start Up Page.................................-->
+        <div>
+            <img class = "charged-bar" id = "chargedBarId"
+            src = "images/charged_bar2.png"
+            draggable = false>
+
+            <img class = "emtpy-bar" id = "emtpyBarId"
+            src = "images/emtpy_bar.png"
+            draggable = false>  
+
+            <img class = "start-button" id="startButtonId"
+            src = "images/start_button.png"
+            draggable = false
+            onmousedown = "ChargeBar()"
+            onmouseleave = "ReleaseBar()"
+            onclick = "StartUp()">
+        </div>
+
+        <div>
+            <img class = "startup-message" id = "startUpMessageId"
+            src = "images/click_to_begin.png"
+            draggable = false
+            onmousedown = "ChargeBar()"
+            onmouseleave = "ReleaseBar()"
+            onclick = "StartUp()">
+        </div>
+
+<!--.................Home Page.......................................-->
+        <div class = "hidden" id = "col_1" onmouseover = "Col_1_Hover()" onmouseleave = "Col_1_Leave()">
+
+            <img class = "hidden" id="returnButton_1"
+            src = "images/return_button.png"
+            draggable = false
+            onclick = "ReturnHome()">
+
+            <ul class = "text" id="text_1" onclick="Expandcol_1()" >
+                <h1>Camera</h1>
+                <h2>Filter</h2>
+                <h3 class = "hidden" id="small_text_1">
+                    <span class = "hidden" id = "arrow_left_1">&lt;&lt;&lt;</span>
+                    Click to Exapnd
+                    <span class = "hidden" id = "arrow_right_1">&gt;&gt;&gt;</span>
+                </h3>
+            </ul>
+
+            <video class = "hidden" id = "video_1" poster="images/camerafilter_cover.png" 
+            draggable = false controls>
+                <source src="clips/camerafilter_clip.mp4" type="video/mp4">
+            </video>
+
+            <img class = "cover" id= "cover_1"
+            src="images/camerafilter_cover.png"
+            draggable = false
+            onclick="Expandcol_1()">
+        </div>
+
+        <div class = "hidden" id = "col_2" onmouseover = "Col_2_Hover()" onmouseleave = "Col_2_Leave()">
+
+            <img class = "hidden" id="returnButton_2" src = "images/return_button.png"
+            draggable = false onclick = "ReturnHome()">
+
+            <ul class = "text" id="text_2" onclick = "Expandcol_2()">
+                <h1>Pathfinding</h1>
+                <h2>Visualizer</h2>
+                <h3 class = "hidden" id="small_text_2">
+                    <span class = "hidden" id = "arrow_left_2">&lt;&lt;&lt;</span>
+                    Click to Exapnd
+                    <span class = "hidden" id = "arrow_right_2">&gt;&gt;&gt;</span>
+                </h3>
+            </ul>
+
+            <video class = "hidden" id = "video_2" poster="images/pathfinding_cover.png" 
+            draggable = false controls>
+                <source src="clips/pathfinding_clip.mp4" type="video/mp4">
+            </video>
+
+            <img class = "cover" id = "cover_2"
+            src = "images/pathfinding_cover.png"
+            draggable = false
+            onclick = "Expandcol_2()">
+        </div>
+
+        <div class = "hidden" id = "col_3" onmouseover = "Col_3_Hover()" onmouseleave = "Col_3_Leave()">     
+
+            <img class = "hidden" id="returnButton_3"
+            src = "images/return_button.png"
+            draggable = false
+            onclick = "ReturnHome()">
+
+            <ul class = "text" id="text_3" 
+            onclick="Expandcol_3()">
+                <h1>Login</h1>
+                <h2>System</h2>
+                <h3 class = "hidden" id="small_text_3">
+                    <span class = "hidden" id = "arrow_left_3">&lt;&lt;&lt;</span>
+                    Click to Exapnd
+                    <span class = "hidden" id = "arrow_right_3">&gt;&gt;&gt;</span>
+                </h3>
+            </ul>
+
+            <video class = "hidden" id = "video_3" poster="images/login_cover.png" 
+            draggable = false controls>
+                <source src="clips/login_clip.mp4" type="video/mp4">
+            </video>
+
+            <img class = "cover" id = "cover_3"
+            src = "images/login_cover.png"
+            draggable = false
+            onclick = "Expandcol_3()">
+        </div>
+
+    </div>
+<!--.................End...............................................-->
+    <script src = "index.js"></script>
+
+</body>
+</html>
