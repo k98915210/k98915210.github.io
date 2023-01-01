@@ -1,128 +1,441 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset= "UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoiChun's Clip Demos</title>
+
+    <!--*-------------------------BODY CSS--------------------------------------->
     <link rel="stylesheet" href="style.css">
+    
+    <!--*-------------------------UNICONS--------------------------------------->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--*-------------------------SWIPER CSS--------------------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    
+    <style>
+        .swiper {
+        width: 100%;
+        height: 90%;
+        }
+
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        }
+        
+        .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    </style>
+    
+    <title>Hoi's Portfolio Website</title>
 </head>
+
 <body>
-    <div class = "main" draggable = false >
-<!--.................Start Up Page.................................-->
-        <div>
-            <img class = "charged-bar" id = "chargedBarId"
-            src = "images/charged_bar2.png"
-            draggable = false>
+    
+    <!--*===============================HEADER=============================-->
+    <header class="header">
 
-            <img class = "emtpy-bar" id = "emtpyBarId"
-            src = "images/emtpy_bar.png"
-            draggable = false>  
-
-            <img class = "start-button" id="startButtonId"
-            src = "images/start_button.png"
-            draggable = false
-            onmousedown = "ChargeBar()"
-            onmouseleave = "ReleaseBar()"
-            onclick = "StartUp()">
-        </div>
-
-        <div>
-            <img class = "startup-message" id = "startUpMessageId"
-            src = "images/click_to_begin.png"
-            draggable = false
-            onmousedown = "ChargeBar()"
-            onmouseleave = "ReleaseBar()"
-            onclick = "StartUp()">
-        </div>
-
-<!--.................Home Page.......................................-->
-        <div class = "hidden" id = "col_1" onmouseover = "Col_1_Hover()" onmouseleave = "Col_1_Leave()">
-
-            <img class = "hidden" id="returnButton_1"
-            src = "images/return_button.png"
-            draggable = false
-            onclick = "ReturnHome()">
-
-            <ul class = "text" id="text_1" onclick="Expandcol_1()" >
-                <h1>Camera</h1>
-                <h2>Filter</h2>
-                <h3 class = "hidden" id="small_text_1">
-                    <span class = "hidden" id = "arrow_left_1">&lt;&lt;&lt;</span>
-                    Click to Exapnd
-                    <span class = "hidden" id = "arrow_right_1">&gt;&gt;&gt;</span>
-                </h3>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#home">
+                        <i class="uil uil-estate"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <i class="uil uil-user"></i> About
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills">
+                        <i class="uil uil-file-alt"></i> Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio">
+                        <i class="uil uil-briefcase-alt"></i> Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#like">
+                        <i class="uil uil-thumbs-up"></i> Like
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="uil uil-message"></i> Contact
+                    </a>
+                </li>
             </ul>
-
-            <video class = "hidden" id = "video_1" poster="images/camerafilter_cover.png" 
-            draggable = false controls>
-                <source src="clips/camerafilter_clip.mp4" type="video/mp4">
-            </video>
-
-            <img class = "cover" id= "cover_1"
-            src="images/camerafilter_cover.png"
-            draggable = false
-            onclick="Expandcol_1()">
         </div>
 
-        <div class = "hidden" id = "col_2" onmouseover = "Col_2_Hover()" onmouseleave = "Col_2_Leave()">
+    </header>
 
-            <img class = "hidden" id="returnButton_2" src = "images/return_button.png"
-            draggable = false onclick = "ReturnHome()">
+    <!--*===============================MAIN===============================-->
+    <main class="main">
 
-            <ul class = "text" id="text_2" onclick = "Expandcol_2()">
-                <h1>Pathfinding</h1>
-                <h2>Visualizer</h2>
-                <h3 class = "hidden" id="small_text_2">
-                    <span class = "hidden" id = "arrow_left_2">&lt;&lt;&lt;</span>
-                    Click to Exapnd
-                    <span class = "hidden" id = "arrow_right_2">&gt;&gt;&gt;</span>
-                </h3>
-            </ul>
+        <!--------------------------HOME------------------------------>
+        <section class="home" id="home">
 
-            <video class = "hidden" id = "video_2" poster="images/pathfinding_cover.png" 
-            draggable = false controls>
-                <source src="clips/pathfinding_clip.mp4" type="video/mp4">
-            </video>
+            <!-----------Introduction----------->  
+            <div class="home_divs">
 
-            <img class = "cover" id = "cover_2"
-            src = "images/pathfinding_cover.png"
-            draggable = false
-            onclick = "Expandcol_2()">
-        </div>
+                <div class="home_div_media">
+                    <a href="https://www.linkedin.com/in/hoi-chun-kan/" target="_blank">
+                        <i class="uil-linkedin-alt"></i>
+                    </a>
+                    <br></br>
+                    <a href="https://github.com/k98915210" target="_blank">
+                        <i class="uil-github-alt"></i>
+                    </a>
+                </div>
 
-        <div class = "hidden" id = "col_3" onmouseover = "Col_3_Hover()" onmouseleave = "Col_3_Leave()">     
+                <div class="home_div_intro">
+                    <img src="">
+                    <h1 class="home_name"> Hi, I am Hoi </h1>
+                    <h3 class="home_title"> Fresh Grad Frontend Developer </h3>
+                    <p class="home_parag"> Experienced in web design and development knowledge.</p>
+                    <a href="#contact" class="home_contact"> 
+                        Contact Me <i class="uil uil-message"></i>
+                    </a>
+                    <a download="Hoi_cv.pdf" href="./cv/cv.pdf" class="home_cv"> 
+                        Get CV <i class="uil uil-import"></i>
+                    </a>
+                </div>
 
-            <img class = "hidden" id="returnButton_3"
-            src = "images/return_button.png"
-            draggable = false
-            onclick = "ReturnHome()">
+                <div class="home_div_icon"></div>
 
-            <ul class = "text" id="text_3" 
-            onclick="Expandcol_3()">
-                <h1>Login</h1>
-                <h2>System</h2>
-                <h3 class = "hidden" id="small_text_3">
-                    <span class = "hidden" id = "arrow_left_3">&lt;&lt;&lt;</span>
-                    Click to Exapnd
-                    <span class = "hidden" id = "arrow_right_3">&gt;&gt;&gt;</span>
-                </h3>
-            </ul>
+                <div class="home_div_bottom">
+                    <i class="uil-mouse-alt"></i>
+                    <span> Scroll down </span>
+                    <i class="uil-arrow-down"></i>
+                </div>    
 
-            <video class = "hidden" id = "video_3" poster="images/login_cover.png" 
-            draggable = false controls>
-                <source src="clips/login_clip.mp4" type="video/mp4">
-            </video>
+            </div>
 
-            <img class = "cover" id = "cover_3"
-            src = "images/login_cover.png"
-            draggable = false
-            onclick = "Expandcol_3()">
-        </div>
+        </section>
 
+        <!--------------------------ABOUT----------------------------->
+        <section class="about" id="about">
+ 
+            <h1 class="about_header"> About Me</h1>
+
+            <!---------------Education--------------->   
+            <h1 class="about_subheader"> 
+                <i class="uil uil-graduation-cap"></i> Education 
+            </h1>
+
+            <div class="about_divs">
+
+                <div class="about_div">
+                    <span class="about_info"> Ontario Tech University </span>
+                    <span class="about_title"> University </span>
+                </div>
+
+                <div class="about_div">
+                    <span class="about_info"> Electrical Engineering </span>
+                    <span class="about_title"> Bachelor of </span>
+                </div>
+
+                <div class="about_div">
+                    <span class="about_info"> 3.6 </span>
+                    <span class="about_title"> GPA </span>
+                </div>
+
+            </div>
+
+            <!---------------Experience--------------->   
+            <h1 class="about_subheader"> 
+                <i class="uil uil-constructor"></i> Experience 
+            </h1>
+
+            <div class="about_divs">
+
+                <div class="about_div">
+                    <span class="about_info"> 01+ </span>
+                    <span class="about_title"> Years </span>
+                </div>
+
+                <div class="about_div">
+                    <span class="about_info"> 05+ </span>
+                    <span class="about_title"> Projects </span>
+                </div>
+
+                <div class="about_div">
+                    <span class="about_info"> 00+ </span>
+                    <span class="about_title"> Companies </span>
+                </div>
+
+            </div>     
+
+            <br></br>            
+            <br></br>
+
+        </section>
+
+        <!--------------------------SKILLS---------------------------->
+        <section class="skills" id="skills">
+
+            <h1 class="skills_header"> Skills </h1>
+            <div class="skills_divs">
+
+                <!---------------Front End--------------->   
+                <div class="skills_div">
+
+                    <div class="skills_div_div">
+                        <i class="uil-desktop"></i>
+                        <span>Front End</span>
+                    </div>
+
+                    <span class="skills_title"> HTML </span>
+                    <span class="skills_percentage"> 80% </span>
+                    <div class="skills_bar_80"> </div>
+
+                    <span class="skills_title"> CSS </span>
+                    <span class="skills_percentage"> 70% </span>
+                    <div class="skills_bar_70"> </div>
+
+                    <span class="skills_title"> JavaScript </span>
+                    <span class="skills_percentage"> 60% </span>
+                    <div class="skills_bar_60"> </div>
+
+                    <span class="skills_title"> React Js </span>
+                    <span class="skills_percentage"> 50% </span>
+                    <div class="skills_bar_50"> </div>
+
+                </div>
+
+                <!---------------Back End--------------->   
+                <div class="skills_div">
+
+                    <div class="skills_div_div">
+                        <i class="uil-desktop"></i>
+                        <span>Back End</span>
+                    </div>
+
+                    <span class="skills_title"> SQL </span>
+                    <span class="skills_percentage"> 60% </span>
+                    <div class="skills_bar_60"> </div>
+                    
+                    <span class="skills_title"> Java </span>
+                    <span class="skills_percentage"> 60% </span>
+                    <div class="skills_bar_60"> </div>
+                    
+                    <span class="skills_title"> PHP </span>
+                    <span class="skills_percentage"> 40% </span>
+                    <div class="skills_bar_40"> </div>
+                    
+                    <span class="skills_title"> Node Js </span>
+                    <span class="skills_percentage"> 30% </span>
+                    <div class="skills_bar_30"> </div>
+                    
+                    <span class="skills_title"> Web APIs </span>
+                    <span class="skills_percentage"> 30% </span>
+                    <div class="skills_bar_30"> </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-------------------------PORTFOLIO--------------------------->
+        <section class="portfolio" id="portfolio">
+            
+            <h1 class="portfolio_header">Portfolio</h1>
+            <h1 class="portfolio_subheader">Most recent works</h1>
+
+            <div class="swiper mySwiper">
+                <!------------------Wrapper------------------>
+                <div class="swiper-wrapper">
+                    <!-----Portfolio 1----->     
+                    <div class="swiper-slide">
+                        <div class="portfolio_div_image">
+                            <image src="./images/like_count.png" class="portfolio_image"></image>
+                        </div>
+
+                        <div class="portfolio_div_text">
+                            <h1 class="portfolio_name">Like Count</h1>
+                            <p class="portfolio_parag">
+                                Drops and Counts likes.
+                                <br></br>
+                                <br></br>
+                                <a href="#like">Try it below!</a>
+                            </p>
+                        </div>
+                    </div> 
+                    <!-----Portfolio 2----->     
+                    <div class="swiper-slide">
+                        <div class="portfolio_div_image">
+                            <image src="./images/camera_filter.png" class="portfolio_image"></image>
+                        </div>
+
+                        <div class="portfolio_div_text">
+                            <h1 class="portfolio_name">Camera Filter</h1>
+                            <p class="portfolio_parag">
+                                Camera filters in real-time video calls.
+                            </p>
+                        </div>
+                    </div>
+                    <!-----Portfolio 3----->   
+                    <div class="swiper-slide">
+                        <div class="portfolio_div_image">
+                            <image src="./images/pathfinding_visualizer.png" class="portfolio_image"></image>
+                        </div>
+
+                        <div class="portfolio_div_text">
+                            <h1 class="portfolio_name">Pathfinding Visualizer</h1>
+                            <p class="portfolio_parag">
+                                Searches from a start-point to a finish-point and returns the shortest path in a grid map.
+                            </p>
+                        </div>
+                    </div>
+                    <!-----Portfolio 4----->     
+                    <div class="swiper-slide">
+                        <div class="portfolio_div_image">
+                            <image src="./images/travel_advisor.png" class="portfolio_image"></image>
+                        </div>
+
+                        <div class="portfolio_div_text">
+                            <h1 class="portfolio_name">Travel Advisor</h1>
+                            <p class="portfolio_parag">
+                                Displays a list of restaurants, hotels and attractions based on Google Map location.    
+                            </p>
+                        </div>
+                    </div> 
+                    <!-----Portfolio 5----->     
+                    <div class="swiper-slide">
+                        <div class="portfolio_div_image">
+                            <image src="./images/login_system.png" class="portfolio_image"></image>
+                        </div>
+
+                        <div class="portfolio_div_text">
+                            <h1 class="portfolio_name">Login System</h1>
+                            <p class="portfolio_parag">
+                                Users can sign up and log in. 
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-------------------Arrows------------------->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-----------------Pagination----------------->
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+        </section>
+
+        <!-------------------------LIKE--------------------------->
+        <section class="like" id="like">
+        
+            <h1 class="like_header"> Share Me Your Likes <i class="uil uil-heart"></i> </h1>
+            <h1 class="like_subheader">Press and hold</h1>
+            
+            <div class="like_divs">
+
+                <div class="like_button_div">    
+                    <image class="like_button" 
+                    src="./images/like.png"
+                    id="like_button"
+                    width="100px"
+                    height="100px"
+                    onclick="addLikes()"></image>
+                </div>
+
+                <div class="like_side_div">
+                    <image id="drop_button" src="./images/drop_off.png" width="56" height="56" onclick="dropLikes()"></image>
+                    <br></br><br></br><br></br>
+                </div>
+
+                <div class="like_count_div">
+                    <h1 class="like_count" id="like_count"></h1>
+                    <h2 class="like_count_likes"> Likes </h2>
+                </div>            
+
+            </div>   
+        </section>      
+        <!-------------------------CONTACT----------------------------->
+        <section class="contact" id="contact">
+
+            <h1 class="contact_header">Contact Me</h1>
+            
+            <div class="contact_divs">
+
+                <!----------------Email--------------->   
+                <div class="contact_div">
+                    <i class="uil uil-envelope-alt"></i>
+                    <h1>kannelson716@gmail.com</h1>
+                </div>
+                <!---------------LinkedIn--------------->   
+                <div class="contact_div">
+                    <i class="uil uil-linkedin-alt"></i>
+                    <h1>linkedin.com/in/hoi-chun-kan</h1>
+                </div>
+                <!---------------Comment--------------->   
+                <div class="contact_div">
+                    <i class="uil uil-calling"></i>
+                    <h1>+1 (647) 913 2233</h1>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--*===============================MATTER CANVAS=======================-->
+    <div class="canvas_div">
+        <canvas id="canvas"></canvas>
     </div>
-<!--.................End...............................................-->
-    <script src = "index.js"></script>
+
+    <!--*-------------------------SWIPER JS--------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          cssMode: true,
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          clickable: true,
+        });
+    </script>
+
+    <!--*-------------------------MATTER JS--------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.10.0/matter.min.js"></script>
+	<script src="like/like_count.js"></script>
+	<script src="like/like_drop.js"></script>
+    <script src="like/like_size.js"></script>
 
 </body>
 </html>

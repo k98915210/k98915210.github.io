@@ -1,437 +1,420 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 125px;
 }
 
-.main{
-    text-align: center;
+/*===============================Header===============================*/
+.header {
+    color:rgb(40, 40, 40);
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    min-width: 900px;
+    height: 75px;
     font-family: 'Poppins', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-image: url(images/startup_background.png);
-    background-position: center;
-    background-size: 100vw 100vh;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    overflow: hidden;
-    
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0 50px 0 0;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    z-index: 2;
 }
-
-/*------------------------Start Up Page-----------------------------------*/
-
-.startup-message{
-    height: 5vh;
+.menu ul{
+    padding: 10px 10px 0 0;
+    vertical-align: center;  
+    text-align: right;
+}
+.menu ul li{
+    list-style: none;
+    margin: 0 20px 0 0;
+    display: inline-block;
+}   
+.menu ul li a{
+    color: rgb(35, 35, 35);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+}   
+.menu ul li a:hover{
+    color: hsl(250, 69%, 61%);
+}  
+/*===============================Main=================================*/
+.main{
+    min-width: 900px;
+    height: 90vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 75px -20px 0 -20px;
+    background-image: url(./images/background.jpg);
+}
+/*----------------------Home-------------------------*/
+/*----------divs------------*/
+.home_divs{
+    text-align: center;
+    padding: 80px 0 0 0;
+}
+.home_div_media{
+    margin: 0 50px 0 50px;
+    display: inline-block;
+}
+.home_div_intro{
+    text-align: left;
+    display: inline-block;
     margin: 10vh 0 0 0;
-    opacity: 0;
-    animation: fadeInOut 3s infinite;
-    animation-delay: 2s;
 }
-
-/*-------------------*/
-
-.start-button{
-    position: relative;
-    width: 34.18vh;
-    height: 40vh;
-    margin: 15vh 0 0 0;
-    animation: fadeIn 4s;
-}
-
-.start-button:hover{
-    opacity: 0.8;
-}
-
-.emtpy-bar{
-    position: absolute;
-    width: 34.18vh;
-    height: 40vh;
-    margin: 15vh 0 0 0;
-}
-
-.emtpy-bar-charge{
-    position: absolute;
-    width: 34.18vh;
-    height: 40vh;
-    margin: 15vh 0 0 0;
-    top: -100%;
-    animation-name: slideUp;
-    animation-duration: 2s;
-}
-
-.charged-bar{
-    position: absolute;
-    width: 34.18vh;
-    height: 40vh;
-    margin: 15vh 0 0 0;
-    animation: fadeIn 4s;
-}
-
-/*--------------------------Home Page------------------------------*/
-.hidden {
-    float: left;
-    line-height:0;
-    height: 0;
-    position: absolute;
-    visibility: hidden;
-}
-
-/*-----------------------*/
-
-.col {
-    float: left;
-    width: 32%;
-    height: 90vh;
-    object-fit: cover;
-    position: relative;
-    margin: 5vh 0.5vw 5vh 0.5vw;
-    border-radius: 50px;    
-    background-image: url(images/full_background.png);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    animation-name: slideDown;
-    animation-duration: 2s;   
-}
-
-.cover{
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-    border-radius: 50px;    
-}
-
-.cover-hover{
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-    border-radius: 50px;    
-    transition: 2s;
-    filter: brightness(80%);
-    z-index: 1;
-    transition: 0.5s;
-}
-
-.text{
-    font-size: 2.8vw;   
-    z-index: 2; 
-    width: 32vw;
-    color: #f7f7f7;
-    position: absolute;
-    margin-top: 30vh;
-    margin-bottom: 30vh;
-    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
-    filter: brightness(100%);
-}
-
-.small-text{
-    font-size: 1.8vw;   
-    z-index: 2; 
-    width: 32vw;
-    color: #f7f7f7;
-    position: absolute;
-    margin-top: 5vh;
-    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
-    filter: brightness(100%);
-    animation: fadeIn;
-    animation-duration: 1s;
-}
-
-.arrow-left{
-    animation: arrowtoLeft 1.5s infinite;
-}
-
-.arrow-right{
-    animation: arrowtoRight 1.5s infinite;
-}
-
-
-
-/*----------------------Expand to Project Page---------------------------------*/
-
-
-
-.col-expand {
-    float: left;
-    width: 90%;
-    height: 90vh;
-    margin: 5vh -50vw 5vh 5vw;
-
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color: rgb(70, 70, 70);
-    
-    border-radius: 50px;    
-    background-image: url(images/expand_background.png);
+.home_div_icon{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;  
+    margin: 0 0 0 66px;
+    object-fit: cover;  
+    background-image: url(./images/icon3.jpeg);
+    background-size: 200px;
     background-position: center;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
-    animation: expand_95;
-    animation-duration: 2s;
-    transition: 0.6s;
-}
-
-.cover-expand{
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;        
-    object-fit: cover;
-}
-
-.text-expand{
-    font-size: 1.8vh;  
-    width:100%; 
-    z-index: 2; 
-    color: #f7f7f7;
-    position: absolute;
-    margin: 5vh 0 30vh -5vw;
-    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
-    animation: textExpand_95;
-    animation-duration: 2s;
-}
-
-.col-left-away  {
-    float: left;
-    width: 32%;
-    height: 90vh;
-    margin: 5vh 10vw 5vh -100vw;
-    border-radius: 50px;    
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
-    transition: 3s;
-}
-
-.col-first-right-away {
-    float: left;
-    width: 32%;
-    height: 90vh;
-    margin: 5vh -100vw 5vh 100vw;
-    border-radius: 50px;    
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
-    animation: slideRight_33_100;
-    animation-duration: 1.5s;
-}
-
-.col-second-right-away {
-    float: left;
-    width: 32%;
-    height: 90vh;
-    margin: 5vh -100vw 5vh 100vw;
-    border-radius: 50px;    
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); 
-    animation: slideRight_66_100;
-    animation-duration: 1s;
-}
-
-/*-----------------------*/
-
-.return-button{
-    opacity: 50%;
-    width: 50px;
-    height: 50px;
-    z-index: 3;
-    position: absolute;
-    margin: 5vh 5vw 0 50px; 
-    animation: fadeInLate 4s;
-}
-
-.return-button:hover{
-    opacity: 100%;
-    filter: brightness(80%);
-    transition: 0.5s;
-}
-
-/*-------------------Contract to Home Page-------------------------*/
-
-.col-shrink{
-    float: left;
-    width: 32%;
-    height: 90vh;
-    object-fit: cover;
-    margin: 5vh 0.5vw 5vh 0.5vw;
-    border-radius: 50px;    
-    background-image: url(images/full_background.png);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    animation-name: shrink_32;
-    animation-duration: 2s;
-    transition: 0.5s;
 }
-
-.col-left-back{
-    float: left;
-    width: 32%;
-    height: 90vh;
-    object-fit: cover;
-    margin: 5vh 0.5vw 5vh 0.5vw;
-    border-radius: 50px;    
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    animation-name: slideRight;
-    animation-duration: 2s;
+.home_div_bottom{
+    color: rgb(80, 80, 80);
+    font-size: 16px;
+    text-align: center;
+    margin: 5vh 0 5vh 0;
 }
-
-.col-right-back{
-    float: left;
-    width: 32%;
-    height: 90vh;
-    object-fit: cover;
-    margin: 5vh 0.5vw 5vh 0.5vw;
-    border-radius: 50px;    
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-    animation-name: slideLeft;
-    animation-duration: 2s;
+/*---------unicons-----------*/
+.uil-linkedin-alt{
+    font-size: 25px;
+    color: hsl(250, 69%, 61%);
 }
-
-.text-shrink{
-    font-size: 2.8vw;    
-    width: 32vw;    
-    z-index: 2;
-    color: #f7f7f7;
-    position: absolute;
-    margin: 30vh 0 30vh 0vw;
-    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
-    animation: textShrink_32;
-    animation-duration: 2s;
+.uil-github-alt{
+    font-size: 25px;
+    color: hsl(250, 69%, 61%);
 }
-
-.text-left-back{
-    font-size: 2.8vw;    
-    width: 32vw;
-    z-index: 2;
-    color: #f7f7f7;
-    position: absolute;
-    margin: 30vh 0 30vh 0vw;
-    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
-    animation-name: expand_32;
-    animation-duration: 2s;
+.uil-mouse-alt{
+    font-size: 20px;  
+    color: hsl(250, 69%, 61%);
 }
-
-.text-right-back{
-    font-size: 2.8vw;    
-    width: 32vw;
-    z-index: 2;
-    color: #f7f7f7;
-    position: absolute;
-    margin: 30vh -100vw 30vh 0vw;
-    text-shadow: rgba(95, 85, 98, 0.5) 0px 0 15px;
-    animation-name: expand_32;
-    animation-duration: 2s;
+.uil-arrow-down{
+    font-size: 25px;
+    color: hsl(250, 69%, 61%);
 }
-
-/*------------------------------Col Hover------------------------------*/
-
-.col:hover, .col-shrink:hover, .col-left-back:hover, .col-right-back:hover{
-    margin: 1vh 0.5vw 5vh 0.5vw;
-    transition: 0.6s;
+/*---------text----------*/
+.home_name{
+    font-size: 50px;
+    color:rgb(30, 30, 30);
 }
-
-.cover-hover{
-    filter: brightness(80%);
-    z-index: 1;
+.home_title{
+    font-size: 30px;
+    color:rgb(80, 80, 80);
 }
-
-/*------------------------------Animation-------------------------------*/
-
-@keyframes fadeIn {
-    from{opacity: 0;}
-    to{opacity: 1;}
+.home_text{
+    font-size: 15px;
+    color:rgb(120, 120, 120);
 }
-
-@keyframes fadeInOut {
-    0%{opacity: 0.1;}
-    50%{opacity: 1;}
-    100%{opacity: 0.1;}
+/*---------button----------*/
+.home_media a{
+    color: rgb(35, 35, 35);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
 }
-
-@keyframes fadeInLate {
-    0%{opacity: 0;}
-    50%{opacity: 0;}
-    100%{opacity: 50%;}
+.home_div_intro a{
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
 }
-
-@keyframes arrowtoLeft {
-    0%{margin-right: 0vw; opacity: 1;}
-    66%{margin-right: 3vw; opacity: 1;}
-    100%{margin-right: 3vw; opacity: 0;}
+.home_contact{
+    font-weight: 500;
+    color: aliceblue;    
+    background-color: hsl(250, 69%, 61%);
+    margin: 0 20px 0 0;
+    padding: 13px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
-
-@keyframes arrowtoRight {
-    0%{margin-left: 0vw; opacity: 1;}
-    66%{margin-left: 3vw; opacity: 1;}
-    100%{margin-left: 3vw; opacity: 0;}
+.home_contact:hover{
+    background-color: hsl(250, 69%, 61%);
 }
-
-@keyframes slideUp {
-    0% {top: -0%;}
-    100% {top: -100%;}
+.home_cv{
+    font-weight: 500;
+    color: aliceblue;    
+    background-color: hsl(250, 69%, 61%);
+    margin: 0 20px 0 0;
+    padding: 13px 33px 13px 33px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
-
-@keyframes slideDown {
-    0% {margin-top: -100vh; pointer-events: none;}
-    100% {margin-top: 5vh; pointer-events: none;}
+.home_cv:hover{
+    background-color: hsl(250, 69%, 61%);
+}
+/*----------------------About-------------------------*/
+/*---------header----------*/
+.about_header{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 300px 0 60px 0;
+}
+.about_subheader{
+    color: hsl(250, 54%, 68%);
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+    margin: 40px 0 40px 0;
+}
+/*------------divs------------*/
+.about_divs{
+    float:center;
+    text-align: center;
+}
+.about_div{
+    display: inline-block;
+    width: 200px;
+    margin: 0 max(30px, 3vw) 0 max(30px, 3vw);
+}
+.about_info{
+    color: rgb(40, 40, 40);
+    font-weight: 200;
+    font-size: 25px;
+}
+.about_title{
+    color: rgb(120, 120, 120);
+    display: block;
+}
+/*----------------------Skills------------------------*/
+.skills_header{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+/*---------divs----------*/
+.skills_divs{
+    float:center;
+    text-align: center;
+}
+.skills_div{
+    vertical-align: top;
+    display: inline-block;
+    height: 400px;
+    width: 300px;
+    max-width: 400px;
+    margin: 0 max(50px, 5vw) 0 max(50px, 5vw);
+    border-radius: 15px;
+    /*box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);*/
 
 }
-
-@keyframes slideLeft {
-    from{margin-left: 64vw; margin-right: -100vw; pointer-events: none;}
-    to{margin-left: 0.5vw; pointer-events: none;}
+.skills_div_div{
+    text-align: center;  
+    margin: 20px 0 10px 0;
 }
-
-@keyframes slideRight {
-    from{margin-left: -32vw; pointer-events: none;}
-    to{margin-left: 0.5vw; pointer-events: none;}
+.skills_div_div i{
+    margin: 0 15px 0 10px;
+    font-size: 30px;  
+    color: hsl(250, 69%, 61%);
 }
-
-@keyframes slideRight_33_100 {
-    from{margin-left: 33.5vw}
-    to{margin-left: 100vw}
+.skills_div_div span{
+    font-weight: 600;
+    font-size: 25px;
 }
-
-@keyframes slideRight_66_100 {
-    from{margin-left: 66.5vw}
-    to{margin-left: 100vw}
+/*---------dropdown items----------*/
+.skills_title{
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(35, 35, 35);
+    margin: 10px 0 0 30px;
 }
-
-@keyframes shrink_32 {
-    from{width: 90%; pointer-events: none;}
-    to{width: 32%; pointer-events: none;}
+.skills_percentage{
+    float: right;
+    color: rgb(120, 120, 120);
+    margin: 0 30px 0 0;
 }
-
-@keyframes expand_32 {
-    from{width: 0vw; pointer-events: none;}
-    to{width: 32vw; pointer-events: none;}
+.skills_bar_30{
+    height: 5px;
+    margin: 10px 30px 10px 30px;
+    border-radius: .25rem;
+    background-image: url(./images/bar_30.jpg);
+    background-size: 100%;
 }
-
-@keyframes expand_95 {
-    from{width: 32%;}
-    to{width: 90%;}
+.skills_bar_40{
+    height: 5px;
+    margin: 10px 30px 10px 30px;
+    border-radius: .25rem;
+    background-image: url(./images/bar_40.jpg);
+    background-size: 100%;
 }
-
-@keyframes textExpand_95 {
-    0%{ 
-        font-size: 2.8vw;    
-        width: 32vw;
-        margin: 30vh 0 30vh 0vw;
-    }
-
-    100%{   
-        font-size: 1.8vh;      
-        width: 100%;
-        margin: 5vh 0 30vh -5vw;
-    }
+.skills_bar_50{
+    height: 5px;
+    margin: 10px 30px 10px 30px;
+    border-radius: .25rem;
+    background-image: url(./images/bar_50.jpg);
+    background-size: 100%;
 }
-
-@keyframes textShrink_32 {  
-    0%{     
-        font-size: 1.8vh;      
-        width: 100%;
-        margin: 5vh 0 30vh -5vw;
-        pointer-events: none;
-    }    
-
-    100%{  
-        font-size: 2.8vw;    
-        width: 32vw;
-        margin: 30vh 0 30vh 0vw;
-        pointer-events: none;
-    }    
+.skills_bar_60{
+    height: 5px;
+    margin: 10px 30px 10px 30px;
+    border-radius: .25rem;
+    background-image: url(./images/bar_60.jpg);
+    background-size: 100%;
+}
+.skills_bar_70{
+    height: 5px;
+    margin: 10px 30px 10px 30px;
+    border-radius: .25rem;
+    background-image: url(./images/bar_70.jpg);
+    background-size: 100%;
+}
+.skills_bar_80{
+    height: 5px;
+    margin: 10px 30px 10px 30px;
+    border-radius: .25rem;
+    background-image: url(./images/bar_80.jpg);
+    background-size: 100%;
+}
+/*---------------------portfolio-----------------------*/
+.portfolio{
+    height: 70vh;
+    margin: 100px 30px 0px 30px;
+    border-radius: 50px;
+}
+/*------------header-------------*/
+.portfolio_header{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+.portfolio_subheader{
+    color: rgb(150, 150, 150);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+/*--------------divs---------------*/
+.portfolio_divs{
+    float:center;
+    text-align: center;
+}
+.portfolio_div_image{
+    display: inline-block;
+    height: 400px;
+    width: 600px;
+    margin: 0 0 25px max(50px, 5vw);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.portfolio_image{
+    border-radius: 15px;
+}
+.portfolio_div_text{
+    text-align: left;
+    display: inline-block;
+    height: 200px;
+    width: 550px;
+    margin: 0 max(50px, 5vw) 0 max(50px, 5vw);
+    overflow: hidden;
+}
+.portfolio_div_text a{
+    color:  hsl(250, 36%, 48%);
+    font-size: 1em;
+    text-decoration: none;
+}
+.portfolio_name{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 22px;
+}
+.portfolio_parag{
+    color: rgb(100, 100, 100);
+}
+/*-------------------------Like--------------------------*/
+/*----------header------------*/
+.like_header{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 150px 0 0 0;
+}
+.like_subheader{
+    color: rgb(150, 150, 150);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+/*----------divs------------*/
+.like_divs{
+    text-align: center;
+    vertical-align: middle;
+}
+.like_button_div{   
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 10px 0;
+}
+.like_button{
+    margin: auto;
+}
+.like_button:hover{
+    filter: brightness(120%);
+}
+.like_side_div{
+    display: inline-block;
+    margin: 0 0 0 120px;
+}
+.like_count_div{
+    display: inline-block;
+    width: 400px;
+    margin: 0 250px 0 60px;
+}
+.like_count{
+    margin: 0 0 0 0;
+    font-size: 155px;
+    color: hsl(250, 42%, 71%); 
+}
+.like_count_likes{
+    margin: 0 0 0 0;
+    font-weight: 500;
+    font-size: 55px;
+    color: hsl(250, 35%, 80%);   
+}
+/*----------------------Contact-----------------------*/
+/*--------------header---------------*/
+.contact_header{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 150px 0 100px 0;
+}
+/*--------------divs---------------*/
+.contact_divs{
+    float:center;
+    text-align: center;
+}
+.contact_div{
+    display: inline-block;
+    margin: 0 30px 0 30px;
+}
+.contact_div i{
+    font-size: 150px;
+    color: hsl(250, 52%, 72%);
+    text-decoration: none;  
+}
+.contact_div h1{
+    font-size: 18px;
+    color: rgb(95, 95, 95);
+    text-decoration: none;  
+    margin: 0 0 200px 0;
+}
+/*===============================Canvas===============================*/
+.canvas_div {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
