@@ -196,6 +196,7 @@ html {
 }
 .skills_div{
     vertical-align: top;
+    /* text-align: left;   */
     display: inline-block;
     height: 400px;
     width: 300px;
@@ -207,7 +208,7 @@ html {
 }
 .skills_div_div{
     text-align: center;  
-    margin: 20px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 .skills_div_div i{
     margin: 0 15px 0 10px;
@@ -229,6 +230,13 @@ html {
     float: right;
     color: rgb(120, 120, 120);
     margin: 0 30px 0 0;
+}
+.skills_bar_0{
+    height: 5px;
+    margin: 10px 30px 10px 30px;
+    border-radius: .25rem;
+    background-image: url(./images/bar_0.jpg);
+    background-size: 100%;
 }
 .skills_bar_30{
     height: 5px;
@@ -275,7 +283,7 @@ html {
 /*---------------------portfolio-----------------------*/
 .portfolio{
     height: 70vh;
-    margin: 100px 30px 0px 30px;
+    margin: 0px 30px 0px 30px;
     border-radius: 50px;
 }
 /*------------header-------------*/
