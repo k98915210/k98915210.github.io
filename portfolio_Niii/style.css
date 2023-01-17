@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 125px;
+}
+/*===============================Header===============================*/
+.header {
+    color:rgb(40, 40, 40);
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    min-width: 900px;
+    height: 75px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0 50px 0 0;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+.menu ul{
+    padding: 10px 10px 0 0;
+    vertical-align: center;  
+    text-align: right;
+}
+.menu ul li{
+    list-style: none;
+    margin: 0px 40px 0 0;
+    display: inline-block;
+}   
+.menu ul li a{
+    color: rgb(35, 35, 35);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+}   
+.menu ul li a:hover{
+    color: hsl(250, 69%, 61%);
+}  
+/*===============================Main=================================*/
+.main{
+    min-width: 900px;
+    height: 90vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0px 0px 10px 0px;
+}
+/*----------------------Home-------------------------*/
+/*----------divs------------*/
+.home_divs{
+    text-align: center;
+    padding: 40px 0 0 0;
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.home_div_media{
+    margin: 0 50px 0 50px;
+    display: inline-block;
+}
+.home_div_intro{
+    text-align: left;
+    display: inline-block;
+    margin: 10vh 0 0 0;
+}
+.home_div_icon{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;  
+    margin: 0 0 0 66px;
+    object-fit: cover;  
+    background-image: url(./images/icon.jpg);
+    background-size: 200px;
+    background-position: center;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.home_div_bottom{
+    color: rgb(80, 80, 80);
+    font-size: 16px;
+    text-align: center;
+    margin: 5vh 0 5vh 0;
+}
+/*---------unicons-----------*/
+.uil-linkedin-alt{
+    font-size: 25px;
+    color: hsl(250, 69%, 61%);
+}
+.pixiv_icon{
+    width: 15px;
+    height: 15px;
+    color: hsl(250, 69%, 61%);
+}
+.uil-twitter-alt{
+    font-size: 25px;
+    color: hsl(250, 69%, 61%);
+}
+.uil-mouse-alt{
+    font-size: 20px;  
+    color: hsl(250, 69%, 61%);
+}
+.uil-arrow-down{
+    font-size: 25px;
+    color: hsl(250, 69%, 61%);
+}
+/*---------text----------*/
+.home_name{
+    font-size: 50px;
+    color:rgb(30, 30, 30);
+}
+.home_title{
+    font-size: 30px;
+    color:rgb(80, 80, 80);
+}
+.home_text{
+    font-size: 15px;
+    color:rgb(120, 120, 120);
+}
+/*---------button----------*/
+.home_media a{
+    color: rgb(35, 35, 35);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+}
+.home_div_intro a{
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+.home_contact{
+    font-weight: 500;
+    color: aliceblue;    
+    background-color: hsl(250, 69%, 61%);
+    margin: 0 20px 0 0;
+    padding: 13px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.home_contact:hover{
+    background-color: hsl(250, 69%, 61%);
+}
+.home_cv{
+    font-weight: 500;
+    color: aliceblue;    
+    background-color: hsl(250, 69%, 61%);
+    margin: 0 20px 0 0;
+    padding: 13px 33px 13px 33px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.home_cv:hover{
+    background-color: hsl(250, 69%, 61%);
+}
+/*---------------------portfolio-----------------------*/
+.portfolio{
+    height: 70vh;
+    margin: 70px 30px 0px 30px;
+    border-radius: 50px;
+}
+/*------------header-------------*/
+.portfolio_header{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+.portfolio_subheader{
+    color: rgb(150, 150, 150);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+/*--------------divs---------------*/
+.portfolio_divs{
+    float:center;
+    text-align: center;
+}
+.portfolio_div_image{
+    display: inline-block;
+    height: 400px;
+    width: 600px;
+    margin: 0 0 25px max(50px, 5vw);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.portfolio_image{
+    border-radius: 15px;
+}
+.portfolio_div_text{
+    text-align: left;
+    display: inline-block;
+    height: 300px;
+    width: 550px;
+    margin: 0 max(50px, 5vw) 0 max(50px, 5vw);
+    overflow: hidden;
+}
+.portfolio_div_text a{
+    color:  hsl(250, 36%, 48%);
+    font-size: 1em;
+    text-decoration: none;
+}
+.portfolio_name{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 22px;
+}
+.portfolio_parag{
+    color: rgb(100, 100, 100);
+}
+.portfolio_parag i{
+    color: rgb(100, 100, 100);
+}
+/*-------------------------Like--------------------------*/
+/*----------header------------*/
+.like_header{
+    color: rgb(50, 50, 50);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    margin: 150px 0 0 0;
+}
+.like_subheader{
+    color: rgb(150, 150, 150);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+/*----------divs------------*/
+.like_divs{
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: min(-10vw, -100px);
+}
+.like_button_div{   
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 10px 0;
+}
+.like_button{
+    margin: auto;
+}
+.like_button:hover{
+    filter: brightness(120%);
+}
+.like_side_div{
+    display: inline-block;
+    margin-left: 120px;
+}
+.like_count_div{
+    display: inline-block;
+    width: 400px;
+    margin-right: 250px;
+    margin-left: 60px;
+}
+.like_count{
+    margin: 0 0 0 0;
+    font-size: 155px;
+    color: hsl(250, 42%, 71%); 
+}
+.like_count_likes{
+    margin: 0 0  0;
+    font-weight: 500;
+    font-size: 55px;
+    color: hsl(250, 35%, 80%);   
+}
+/*===============================Canvas===============================*/
+.canvas_div {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/*===============================Bottom Background Image===============================*/
+.background_image {
+    position: absolute;
+    min-width: 900px;
+    width: 97vw;
+    height: auto;
+    margin: 0 0 0 0;
+    z-index: -2;
+}
