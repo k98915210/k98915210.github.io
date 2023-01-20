@@ -44,7 +44,7 @@ html {
     min-width: 900px;
     height: 90vh;
     font-family: 'Poppins', sans-serif;
-    margin: 75px -20px 0 -20px;
+    margin: 75px 0px 0 0px;
     background-image: url(./images/background.jpg);
 }
 /*----------------------Home-------------------------*/
@@ -389,6 +389,14 @@ html {
     font-size: 55px;
     color: hsl(250, 35%, 80%);   
 }
+.background_image {
+    position: absolute;
+    min-width: 900px;
+    width: 97vw;
+    height: auto;
+    margin: -100px 0 0px 0;
+    z-index: -2;
+}
 /*----------------------Contact-----------------------*/
 /*--------------header---------------*/
 .contact_header{
@@ -396,7 +404,7 @@ html {
     font-weight: 600;
     font-size: 32px;
     text-align: center;
-    margin: 150px 0 100px 0;
+    margin: max(20vw, 200px) 0 100px 0;
 }
 /*--------------divs---------------*/
 .contact_divs{
